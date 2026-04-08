@@ -1,8 +1,50 @@
-# Mark-2 Scaper
+# Mark-2 Scaper - User Guide
 
 A powerful contact information scraper that automates Google searches to extract email addresses and phone numbers from various online sources including social media platforms, business directories, and websites.
 
-## Features
+## Quick Start Guide
+
+### Step 1: Prerequisites Check
+- ✅ Windows 10 or later
+- ✅ .NET Framework 4.8 installed
+- ✅ Google Chrome browser installed
+- ✅ Internet connection
+
+### Step 2: Get the Application
+1. Download or clone the project source code
+2. Open `Mark_2 Scaper.csproj` in Visual Studio 2019 or later
+3. Wait for NuGet packages to restore automatically
+4. Build the solution (F6 or Build → Build Solution)
+
+### Step 3: Run the Application
+1. Press F5 to start debugging, or
+2. Navigate to `bin\Debug\` folder and run `Mark_1 Scaper.exe`
+
+### Step 4: Configure Your First Scrape
+1. **Enter Keyword**: Type your search term (e.g., "restaurant in New York")
+2. **Output File**: Enter filename like "contacts.csv" or "leads.xlsx"
+3. **Pages**: Set to 3-5 pages per query (start small)
+4. **Proxy**: Check if you want to use proxy (optional)
+
+### Step 5: Select Data Sources
+Choose platforms to search:
+- ☑️ Facebook, Instagram, LinkedIn for social contacts
+- ☑️ IndiaMart, Justdial for business directories
+- ☑️ Website for general web results
+
+### Step 6: Select Contact Types
+Choose what to extract:
+- ☑️ Gmail - for Google email addresses
+- ☑️ Outlook - for Microsoft emails
+- ☑️ Phone - for phone numbers
+
+### Step 7: Start Scraping
+1. Click **"Start Scraping"** button
+2. Watch the logs for progress
+3. Wait for completion message
+4. Check your Documents\Mark1_Scraper\ folder for results
+
+## Detailed Features
 
 - **Automated Google Search**: Uses Selenium WebDriver to perform targeted Google searches
 - **Multiple Data Sources**: Supports scraping from:
@@ -35,7 +77,7 @@ The application uses the following NuGet packages:
 - **DocumentFormat.OpenXml** (3.1.1) - Office document handling
 - Various system libraries for enhanced compatibility
 
-## Installation
+## Installation (Detailed)
 
 1. **Clone or Download**: Obtain the project source code
 2. **Open in Visual Studio**: Load `Mark_2 Scaper.csproj` in Visual Studio 2019 or later
@@ -45,7 +87,20 @@ The application uses the following NuGet packages:
    ```
 4. **Build Solution**: Build the project in Debug or Release configuration
 
-## Usage
+## Usage Guide
+
+### Application Interface
+The main window contains:
+- **Keyword field**: Enter your search terms
+- **Output file field**: Name your results file (.csv or .xlsx)
+- **Pages control**: Number of Google pages to scrape (1-100)
+- **Proxy checkbox**: Enable proxy for anonymity
+- **Sources checkboxes**: Select platforms to search
+- **Query Types checkboxes**: Select Gmail/Outlook/Phone
+- **Start/Stop buttons**: Control scraping process
+- **Logs area**: Real-time progress and status messages
+
+### Running a Scrape Operation
 
 1. **Launch Application**: Run the compiled executable or start debugging in Visual Studio
 2. **Configure Search**:
@@ -58,6 +113,15 @@ The application uses the following NuGet packages:
 5. **Start Scraping**: Click "Start Scraping" button
 6. **Monitor Progress**: Watch real-time logs for progress updates
 7. **Stop if Needed**: Use "Stop" button to cancel operation
+
+### Understanding the Logs
+- ▶ **Started**: Scraping operation begins
+- 🌐 **Chrome opened**: Browser initialized
+- 📄 **Page X**: Processing Google result page X
+- 🔗 **Found Y results**: Number of search results on current page
+- 📧 **X emails | 📞 Y phones**: Contacts extracted from page
+- ✅ **Completed**: Operation finished successfully
+- ❌ **Error**: Something went wrong
 
 ## Output Format
 
@@ -73,6 +137,14 @@ Results are saved to a CSV or Excel file in `Documents\Mark1_Scraper\` folder wi
 - **Emails**: Extracted email addresses (comma-separated)
 - **Phones**: Extracted phone numbers (comma-separated)
 - **GooglePage**: Page number where result was found
+
+## Tips for Best Results
+
+- **Start Small**: Begin with 2-3 pages and one source to test
+- **Use Specific Keywords**: "restaurant supply company" better than "restaurant"
+- **Combine Sources**: Check multiple platforms for comprehensive results
+- **Monitor Logs**: Watch for captcha prompts or errors
+- **Save Regularly**: Use different filenames for different searches
 
 ## Important Notes
 
@@ -104,6 +176,8 @@ The application follows a modular architecture:
 - **Proxy Problems**: Verify proxy server settings and connectivity
 - **File Access Errors**: Ensure write permissions to output directory
 - **Captcha Loops**: Manual captcha solving may be required periodically
+- **No Results Found**: Try different keywords or sources
+- **Application Won't Start**: Check .NET Framework installation
 
 ## License
 
